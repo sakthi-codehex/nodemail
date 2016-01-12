@@ -52,7 +52,7 @@ if (request.method == 'POST') {
     var server = http.createServer(handleRequest);
 
     //start server
-    server.listen(PORT, function(){
+    server.listen(process.env.PORT, function(){
         //Callback triggered when server is successfully listening.
         //console.log("Server listening on: http://localhost:%s", PORT);
     });

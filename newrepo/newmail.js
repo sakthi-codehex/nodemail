@@ -53,7 +53,7 @@ app.get('/', function(request, response){
             });
             console.log(address);
 	}
-	else
+	else if(type == 't')
 	{
 		var res = request.query.ResId;
 		var hot = request.query.HotelId;
@@ -74,6 +74,6 @@ app.get('/', function(request, response){
   response.send('ResId: ' + request.query.ResId);
 });
 
-app.listen(8080, 'localhost', function() {
+app.listen(process.env.PORT, function() {
   //console.log("... port %d in %s mode", app.address().port, app.settings.env);
 });
